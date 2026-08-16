@@ -4,6 +4,14 @@
   "description": "Vision plugin for opencode: ask any model opencode has access to about images (clipboard, files, URLs, session attachments), with parent-prompt forwarding, session history and caching.",
   "type": "module",
   "main": "./index.ts",
+  "license": "MIT",
+  "author": "entrptaher",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/entrptaher/opencode-better-eyesight.git"
+  },
+  "keywords": ["opencode", "opencode-plugin", "vision", "image", "screenshot", "clipboard"],
+  "files": ["index.ts", "src"],
   "scripts": {
     "typecheck": "tsc --noEmit",
     "test": "bun test"

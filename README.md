@@ -6,17 +6,25 @@ Most useful with text-only coding models, which otherwise can't see the screensh
 
 ## Setup
 
+From npm:
+
 ```jsonc
 // opencode.json / opencode.jsonc in the project root
 {
   "$schema": "https://opencode.ai/config.json",
   "plugin": [
-    ["./opencode-better-eyesight/index.ts", { "model": "openrouter/dots-studio/dots-3-note-preview:free" }]
+    ["opencode-better-eyesight", { "model": "openrouter/dots-studio/dots-3-note-preview:free" }]
   ]
 }
 ```
 
-Run `bun install` in `opencode-better-eyesight/` once, then restart opencode.
+Or from a local checkout (for development):
+
+```jsonc
+{ "plugin": [["./opencode-better-eyesight/index.ts", { "model": "..." }]] }
+```
+
+For the local path variant, run `bun install` in `opencode-better-eyesight/` first, then restart opencode. The npm variant handles that itself.
 
 `model` is optional, in opencode's `provider/model-id` format. Without it, the vision call uses opencode's default model.
 
