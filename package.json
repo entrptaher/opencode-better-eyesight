@@ -1,0 +1,19 @@
+{
+  "name": "opencode-better-eyesight",
+  "version": "0.1.0",
+  "description": "Vision plugin for opencode: ask any model opencode has access to about images (clipboard, files, URLs, session attachments), with parent-prompt forwarding, session history and caching.",
+  "type": "module",
+  "main": "./index.ts",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "bun test"
+  },
+  "dependencies": {
+    "@opencode-ai/plugin": "1.18.18"
+  },
+  "devDependencies": {
+    "@opencode-ai/sdk": "1.18.18",
+    "@types/bun": "1.3.10",
+    "typescript": "5.9.3"
+  }
+}
