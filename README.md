@@ -1,5 +1,7 @@
 # opencode-better-eyesight
 
+[![npm](https://img.shields.io/npm/v/opencode-better-eyesight)](https://www.npmjs.com/package/opencode-better-eyesight)
+
 Image understanding for [opencode](https://opencode.ai). Agents get an `eyesight` tool that asks a vision model about an image: the clipboard, something pasted into the conversation, a file path, or a URL. The vision call is routed through opencode itself (`session.prompt`), so it uses whatever providers and models opencode already has configured. Nothing here talks to a vendor API directly.
 
 Most useful with text-only coding models, which otherwise can't see the screenshots you paste.
@@ -27,6 +29,8 @@ Or from a local checkout (for development):
 For the local path variant, run `bun install` in `opencode-better-eyesight/` first, then restart opencode. The npm variant handles that itself.
 
 `model` is optional, in opencode's `provider/model-id` format. Without it, the vision call uses opencode's default model.
+
+Requires opencode 1.18 or newer (built and tested against 1.18.18; the entry point is TypeScript, which opencode loads via Bun).
 
 ## Usage
 
